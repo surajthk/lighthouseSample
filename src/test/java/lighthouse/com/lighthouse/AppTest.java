@@ -27,7 +27,7 @@ public class AppTest
 	    	
 	    }
 	    	public void performLoadTest(String Url, String device) throws Exception {
-	            URL url = new URL("https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=" + Url + "&key=" + "AIzaSyBgJMAmT9pdimF-Zm5d-5FoBIE_2m-3WBQ"
+	            URL url = new URL("https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=" + Url + "&key=" + ""
 	                    + "&strategy=" + device);
 	            HttpURLConnection http = (HttpURLConnection) url.openConnection();
 	            System.out.println(http.getResponseCode() + " " + http.getResponseMessage());
