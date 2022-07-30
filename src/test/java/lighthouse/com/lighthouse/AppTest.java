@@ -65,5 +65,13 @@ public class AppTest
 	            System.out.println("CLI of website for " + device + " : " + cli.get("displayValue").toString());
 	            System.out.println("Block time of website for " + device + " : " + blockTime.get("displayValue").toString());
 
+ String command="lighthouse "+url+"  --output=html --port "+port;    
+             ProcessBuilder myProc2 = new ProcessBuilder("cmd.exe", "/C", command);
+             myProc2.redirectErrorStream(true);        
+             final Process process = myProc2.start();
+             InputStream myIS = process.getInputStream();
+             String tempOut = convertStreamToStr(myIS);      
+            System.out.println(tempOut);              
+}
 	        }
 }
